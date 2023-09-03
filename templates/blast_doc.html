@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>SequenceServer: Custom BLAST Server</title>
+  <meta name="author" content="Anurag Priyam">
+  <meta name="author" content="Ben J. Woodcroft">
+  <meta name="author" content="Vivek Rai">
+  <meta name="author" content="Cedric Wurm">
+  <meta name="author" content="Yannick Wurm">
+  <meta name="description" content="Custom BLAST server provided by SequenceServer (https://www.sequenceserver.com)"/>
+
+  <!-- CSS -->
+  
+    <link rel="stylesheet" media="screen,print" type="text/css" href="css/sequenceserver.min.css?ver=2.1.0"/>
+  
+</head>
+
+<body>
+  <div
+    class="navbar">
+    <div
+      class="container">
+      <a
+        class="navbar-brand"
+        href="https://sequenceserver.com" target="_blank">
+        <img class="logo" src="SequenceServer_logo.png" alt="sequenceserver_logo">
+        <small>
+          2.1.0
+        </small>
+      </a>
+      <ul class="nav navbar-nav navbar-right hover-reset focus-reset">
+        <li>
+          <a
+            target="_blank"
+            href="https://www.sequenceserver.com/#support">
+            <i class="fa fa-comment-o"></i>
+            &nbsp;Help &amp; Support
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div
+    class="container">
+    <noscript>
+      <div
+        class="nojs-error">
+        <h3>SequenceServer can't work without JavaScript.</h3>
+        <ul>
+          <li>Please see if you can enable JavaScript in your browser's preferences.</li>
+          <li>If your browser doesn't support JavaScript, please consider upgrading to the latest version or using Firefox or Chrome.</li>
+        </ul>
+      </div>
+    </noscript>
+  </div>
+
+  <!-- We will initialise React on this div -->
+<div id="view"></div>
+
+<!-- JS -->
+  <script src="sequenceserver-report.min.js?ver=2.1.0"></script>
+
+
+  <div
+    class="footer" id="footer">
+    <hr>
+    <div
+      class="container">
+      <p
+        class="text-center">
+	Please cite data sources and <a style='vertical-align: baseline' href="https://doi.org/10.1093/molbev/msz185">the paper</a> describing <a href="https://wurmlab.com">our</a> <a href="https://sequenceserver.com">SequenceServer BLAST interface</a>.
+        <a style='vertical-align: baseline'
+          href='https://sequenceserver.com'><em>
+          Perform BLAST analyses.
+        </em></a>
+      </p>
+      
+    </div> <!-- /container -->
+  </div>
+
+  <!-- twitter -->
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</body>
+</html>

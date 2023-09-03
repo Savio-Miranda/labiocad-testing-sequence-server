@@ -1,5 +1,6 @@
-import time
-from flask import Blueprint, redirect, current_app
+import time, requests
+from flask import Blueprint, redirect, current_app, request, render_template
+from bs4 import BeautifulSoup
 
 
 bp = Blueprint('routes', __name__)
@@ -16,7 +17,15 @@ def index():
     return redirect(sequenceserver, 302)
 
 
-@bp.route('/id/<id>', methods=['POST'])
+@bp.route('/id/<id>', methods=['POST', 'GET'])
 def receive_id(id):
-    print(f"recebeu isso aqui {id}")
-    return id
+    if request.method == 'POST':
+        blast_result = f"{current_app.config['INDEX']}/{id}"
+        response = requests.get(blast_result)
+        with open('templates/blast_doc.html', 'w') as file:
+            file.write(response.text)
+    
+        return id
+    
+    if request.method == 'GET':
+        return render_template('blast_doc.html')
